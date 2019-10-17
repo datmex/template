@@ -16,7 +16,7 @@ mongo = db.inegi
 
 app.config['MONGO_URI'] = uri
 mongo = PyMongo(app)
-mongo = mongo.inegi
+mongo = mongo.db['inegi']
 
 def output_json(obj, code, headers=None):
     resp = make_response(dumps(obj), code)
